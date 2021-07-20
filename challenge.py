@@ -41,7 +41,7 @@ data['obsolete'] = data['date'].map(obsolete_flaging)
 
 # Transform the output data to a JSON format
 
-data.to_json(data.json)
+data_with_obsolete_column = data.to_json()
 
 # Store the data in your local directory
 
