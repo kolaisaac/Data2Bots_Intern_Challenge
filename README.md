@@ -1,5 +1,9 @@
 # Data2Bots_Intern_Challenge
 
+[![Build Status](https://travis-ci.com/kolaisaac/Data2Bots_Intern_Challenge.svg?branch=main)](https://travis-ci.com/kolaisaac/Data2Bots_Intern_Challenge.svg?branch=main)
+[![Circle CI](https://img.shields.io/badge/license-MIT-blue.svg)](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Python 3.6+](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+
 ### This is part of the `Data2Bots Intern Job Assessment` Test
 
 
