@@ -7,25 +7,40 @@ import numpy as np
 
 data = pd.read_csv("dataset.csv")
 
-# declaration of variables
 
-item_date = data['date']
+def check_expiration(data):
 
-obsolete = np.where(data['date']<'2021-01-01', True, False)
+	# declaration of variables
+	item_date = data['date']
+
+	# Adds a new column named [obsolete]. The column should flag TRUE, indicating an item is 
+	# expired and FALSE, otherwise
+
+	obsolete = np.where(data['date']<'2021-01-01', True, False)
+
+	data['obsolete'] = obsolete
+
+	data_with_obsolete_column = data
+
+	return data_with_obsolete_column
 
 
-# Adds a new column named [obsolete]. The column should flag TRUE, indicating an item is 
-# expired and FALSE, otherwise
-
-data['obsolete'] = obsolete
-
-data_with_obsolete_column = data
 
 # Transform the output data to a JSON format
 
-data_with_obsolete_updated = data_with_obsolete_column.to_json()
+def data_to_json(data):
+    
+    try:
+        data_to_json = data.to_json()
 
-# Store the data in your local directory
+        # Store the data in your local directory
+        
+        with open('data_updated.json', 'w') as json_file:
+            json.dump(data_to_json, json_file)
+            
+        print("JSON file created successfully")
+        
+    except Exception:
+        print("JSON file not created")
 
-with open('data_with_obsolete_updated.json', 'w') as json_file:
-	json.dump(data_with_obsolete_updated, json_file)
+data_to_json(data)
