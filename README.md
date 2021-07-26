@@ -34,3 +34,21 @@ Connect with me on these platforms:
 - 🌱 I’m always learning, I formed #DL3 (Dedicated Life Long Learner)
 
 - 💬 Ask me about: Cloud Computing, Machine Learning and Data Science
+
+
+## How to test solution
+
+1. Clone or Fork the `repo`
+2. Locate / navigate to the repo on your local machine.
+3. Optionally Setup and Activate your virtual enviroment  **_in the same directory_** in your local repo folder 
+4. Install dependencies - run `pip install -r requirements.txt`.
+5. **_Remove_** the existing `data_updated.json` file
+6. To run the my `solution` navigate to the folder containing the `repo` in the console and run `python -m challenge.py`
+7. To run the tests run `python -m unittest test_main.py`
+
+
+#### Note
+
+- Optionally open the challenge note.ipynb file in a Jupyter Notebook and run the cells one by one 
+
+- Travis CI is used for continuous integration test
